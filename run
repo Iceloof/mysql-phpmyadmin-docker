@@ -1,7 +1,0 @@
-#!/bin/bash
-docker-compose down
-docker container kill $(docker ps | grep "mysql-server" | awk '{ print $1 }')
-docker rm $(docker ps -a | grep "mysql-server" | awk '{ print $1 }')
-docker container kill $(docker ps | grep "phpmyadmin-server" | awk '{ print $1 }')
-docker rm $(docker ps -a | grep "phpmyadmin-server" | awk '{ print $1 }')
-docker-compose -f docker-compose.yml up -d

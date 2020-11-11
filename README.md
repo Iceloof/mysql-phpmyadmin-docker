@@ -1,4 +1,5 @@
 # mysql-phpmyadmin-docker
+Configure `docker-compose.yml` with your own setting
 
 ## Mysql
 ```
@@ -21,4 +22,8 @@
     PMA_HOST: <docker-db-name>
   ports:
     - "<forward port>:80"
+```
+## Build and run
+```
+docker-compose -f docker-compose.yml up -d
 ```
