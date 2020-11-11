@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  mysql-server:
+    container_name: mysql-server
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - /mysql-data:/var/lib/mysql
+    ports:
+      - "3308:3306"
+  phpmyadmin-server:
+    container_name: phpmyadmin-server
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mysql-server
+    ports:
+      - "808:80"
