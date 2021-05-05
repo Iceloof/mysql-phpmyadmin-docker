@@ -7,7 +7,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - /mysql-data:/var/lib/mysql
+      - /home/nora/Programs/Data/mysql-data:/var/lib/mysql
     ports:
       - "3306:3306"
     command: mysqld --max_allowed_packet=32505856 --max_connections=500 --sql_mode="" --character-set-server=utf8 --collation-server=utf8_general_ci --init-connect='SET NAMES UTF8;' --innodb-flush-log-at-trx-commit=0
